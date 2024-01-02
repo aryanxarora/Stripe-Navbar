@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  pointer-events: none;
+}
+
+img::selection {
+  background-color: #ffffff00;
+}
+
+.start-bg {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0ce444c7-f456-4517-aa00-251c9a73a3c6/dcb1y4k-9f022de4-fb68-462b-95cf-7e41a6d4f3de.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBjZTQ0NGM3LWY0NTYtNDUxNy1hYTAwLTI1MWM5YTczYTNjNlwvZGNiMXk0ay05ZjAyMmRlNC1mYjY4LTQ2MmItOTVjZi03ZTQxYTZkNGYzZGUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jg79k0AfgY-Tz2tmwrHB9DS6DwhmyeVsnh7pW5L3Hyg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* reusable tailwind classes */
+.btn-primary {
+  @apply bg-black text-white py-2 px-10 rounded;
+}
