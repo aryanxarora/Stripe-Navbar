@@ -98,7 +98,10 @@ const Navbar = () => {
             <a href={logo.link}>
               <h1 className="font-head font-bold text-2xl">{logo.name}</h1>
             </a>
-            <a className="bg-white bg-opacity-5 py-3 px-4 rounded-full cursor-pointer">
+            <a
+              href="#mobileNav"
+              className="bg-white bg-opacity-5 py-3 px-4 rounded-full cursor-pointer"
+            >
               <svg width="16" height="10" viewBox="0 0 16 10">
                 <title>Open mobile navigation</title>
                 <g fill="white">
@@ -112,7 +115,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="block lg:hidden p-5">
+      <div id="mobileNav" className="block lg:hidden p-5 absolute top-0 w-full">
         <div className="bg-white rounded-lg w-full min-h-[600px] h-auto p-3 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between pb-5">
@@ -121,7 +124,7 @@ const Navbar = () => {
                   {logo.name}
                 </h1>
               </a>
-              <button>
+              <a href="#">
                 <svg width="40" height="40" viewBox="0 0 40 40">
                   <title>Close mobile navigation</title>
                   <path
@@ -130,7 +133,7 @@ const Navbar = () => {
                     fill-rule="evenodd"
                   ></path>
                 </svg>
-              </button>
+              </a>
             </div>
             <div>
               {links.map((link, index) => (
