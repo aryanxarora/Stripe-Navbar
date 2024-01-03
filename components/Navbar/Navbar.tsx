@@ -16,7 +16,7 @@ const Navbar = () => {
           <div>
             <ul className="flex items-center justify-center gap-10">
               {links.map((link) => (
-                <li className="relative group">
+                <li className="relative group" key={link.parent}>
                   {link.link ? (
                     <a
                       href={link.link}
@@ -30,7 +30,7 @@ const Navbar = () => {
                     </button>
                   )}
                   {link.children && (
-                    <div className="absolute top-0 left-0 transition translate-y-0 group-hover:translate-y-5 invisible opacity-0 group-hover:opacity-100 group-hover:visible animate-short group-hover:transform z-50 min-w-[250px] transform">
+                    <div className="absolute top-0 left-0 transition translate-y-5 invisible opacity-0 group-hover:opacity-100 group-hover:visible animate-short group-hover:transform z-50 min-w-[250px] transform">
                       <div className="relative top-6 p-2 bg-white rounded-xl shadow-xl w-full flex flex-col z-50">
                         <div className="w-10 h-10 bg-white transform rotate-45 absolute top-0 z-0 translate-x-0 rounded-sm"></div>
                         {link.children && (
@@ -76,7 +76,7 @@ const Navbar = () => {
                 viewBox="0 0 10 10"
                 aria-hidden="true"
               >
-                <g fill-rule="evenodd">
+                <g>
                   <path
                     className="opacity-0 group-hover:opacity-100 animate-short"
                     d="M0 5.5h7"
@@ -101,7 +101,7 @@ const Navbar = () => {
             <a className="bg-white bg-opacity-5 py-3 px-4 rounded-full">
               <svg width="16" height="10" viewBox="0 0 16 10">
                 <title>Open mobile navigation</title>
-                <g fill="white" fill-rule="evenodd">
+                <g fill="white">
                   <rect y="8" width="16" height="2" rx="1"></rect>
                   <rect y="4" width="16" height="2" rx="1"></rect>
                   <rect width="16" height="2" rx="1"></rect>
