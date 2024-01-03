@@ -19,14 +19,15 @@ img::selection {
   background-color: #ffffff00;
 }
 
-.start-bg {
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0ce444c7-f456-4517-aa00-251c9a73a3c6/dcb1y4k-9f022de4-fb68-462b-95cf-7e41a6d4f3de.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzBjZTQ0NGM3LWY0NTYtNDUxNy1hYTAwLTI1MWM5YTczYTNjNlwvZGNiMXk0ay05ZjAyMmRlNC1mYjY4LTQ2MmItOTVjZi03ZTQxYTZkNGYzZGUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jg79k0AfgY-Tz2tmwrHB9DS6DwhmyeVsnh7pW5L3Hyg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 /* reusable tailwind classes */
 .btn-primary {
   @apply bg-black text-white py-2 px-10 rounded;
+}
+
+.animate-short {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.animate-long {
+  @apply transition-all duration-500 ease-in-out;
 }
