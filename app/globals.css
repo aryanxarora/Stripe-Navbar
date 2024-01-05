@@ -31,13 +31,3 @@ img::selection {
 .animate-long {
   @apply transition-all duration-500 ease-in-out;
 }
-
-#mobileNav {
-  display: none;
-  transition: all 0.3s ease-in-out;
-}
-
-#mobileNav:target {
-  display: block;
-  transition: all 0.3s ease-in-out;
-}
