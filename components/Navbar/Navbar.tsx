@@ -60,6 +60,7 @@ const NavModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           <div className={`${parent === null ? "" : "hidden"}`}>
             {links.map((link, index) => (
               <button
+                key={link.parent}
                 className="flex flex-col w-full"
                 onClick={() => handleClick(link)}
               >
@@ -113,7 +114,7 @@ const NavModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               {parent?.parent}
             </h1>
             {parent?.children?.map((child) => (
-              <a href={child.link} className="group">
+              <a key={child.name} href={child.link} className="group">
                 <div className="py-2 rounded-lg w-full">
                   <p className="font-semibold text-slate-800">{child.name}</p>
                   <p className="text-slate-500 group-hover:text-slate-800 animate-short">
@@ -204,7 +205,11 @@ const Navbar = () => {
                             }`}
                           >
                             {link.children.map((child) => (
-                              <a href={child.link} className="z-50">
+                              <a
+                                key={child.name}
+                                href={child.link}
+                                className="z-50"
+                              >
                                 <div className="py-2 px-4 hover:bg-slate-100 rounded-lg w-full">
                                   <p className="font-semibold text-slate-800">
                                     {child.name}
