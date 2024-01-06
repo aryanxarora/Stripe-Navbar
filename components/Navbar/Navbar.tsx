@@ -34,7 +34,7 @@ const NavModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   if (!isOpen) return null;
   return (
-    <div className="block lg:hidden p-5 absolute top-0 w-full">
+    <div className="block lg:hidden p-5 absolute top-0 w-full z-50">
       <div className="bg-white text-slate-600  rounded-lg w-full min-h-[600px] h-auto p-3 flex flex-col justify-between">
         <div className="relative ">
           <div className="flex items-center justify-between pb-5">
