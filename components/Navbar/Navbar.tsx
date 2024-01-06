@@ -43,7 +43,12 @@ const NavModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 {logo.name}
               </h1>
             </a>
-            <button onClick={onClose}>
+            <button
+              onClick={() => {
+                setParent(null);
+                onClose();
+              }}
+            >
               <svg width="40" height="40" viewBox="0 0 40 40">
                 <path
                   d="M25.6 14.3a1 1 0 0 1 0 1.4l-4.24 4.25 4.25 4.24a1 1 0 1 1-1.42 1.42l-4.24-4.25-4.24 4.25a1 1 0 0 1-1.42-1.42l4.25-4.24-4.25-4.24a1 1 0 0 1 1.42-1.42l4.24 4.25 4.24-4.25a1 1 0 0 1 1.42 0z"
